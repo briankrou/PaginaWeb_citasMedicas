@@ -315,6 +315,12 @@ template {
     Contiene estilos para la estructura general de la página,
     como encabezados, pies de página, barras de navegación, etc.
 */
+.logo {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center; }
+
 /* componentes/:______________________________________________________
 
 
