@@ -1,0 +1,65 @@
+
+/*base/: _______________________________________________________________
+
+Contiene estilos base que se aplican a través de todo el sitio, 
+como reinicio de estilos, estilos tipográficos y variables globales.
+*/
+
+@import "./base/reset";
+@import "./base/normalize.scss"; 
+@import "./base/typography";
+@import "./base/variables";
+
+/*layout/_______________________________________________________________
+
+
+    Contiene estilos para la estructura general de la página,
+    como encabezados, pies de página, barras de navegación, etc.
+*/
+
+@import "./layout/footer";
+@import "./layout/header";
+
+/* componentes/:______________________________________________________
+
+
+    Aquí se almacenan los estilos para componentes reutilizables
+    del sitio, como botones, formularios, tarjetas, etc./
+*/
+@import "./components/button";
+@import "./components/navbar";
+
+/* Pages/: __________________________________________________________
+    Contiene estilos para la estructura general de la página,
+    como encabezados, pies de página, barras de navegación, etc.
+
+*/
+@import "./pages/about";
+@import "./pages/home";
+
+
+/*themes/
+Si tu aplicación permite múltiples temas,
+puedes organizar los estilos relacionados con los temas en esta carpeta.
+*/
+
+@import "./themes/dark/buttons";
+@import "./themes/light/buttons";
+
+/*vendors/
+Aquí se colocan los estilos de bibliotecas externas o frameworks, como Bootstrap.
+*/
+
+///*bootstrap*/ @import "./vendors/bootstrap";
+
+
+
+/*utilities/:
+
+ En esta carpeta, puede colocar estilos de utilidad que se aplican en todo el sitio para 
+ clases específicas que tienen un propósito único y se reutilizan en diferentes partes del sitio.
+ Estos estilos ayudan a mantener un código más limpio y modular,
+  ya que puedes aplicar clases de utilidad en lugar de repetir estilos en varios lugares.
+*/
+
+

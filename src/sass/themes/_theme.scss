@@ -1,0 +1,19 @@
+
+
+/*tema específico. 
+ estilos para un tema particular.*/
+
+/*ESTILO DARK*/
+
+@import "./dark/buttons";
+@import "./dark/navbar";
+@import "./dark/typography";
+@import "./dark/variables";
+
+
+/*ESTILO LIGHT*/
+
+@import "./light/buttons";
+@import "./light/navbar";
+@import "./light/typography";
+@import "./light/variables";
