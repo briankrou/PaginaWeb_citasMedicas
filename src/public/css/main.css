@@ -321,6 +321,9 @@ template {
   flex-direction: column;
   align-content: center; }
 
+footer {
+  background-image: linear-gradient(#F3F2F9, #A5C6E5); }
+
 /* componentes/:______________________________________________________
 
 
