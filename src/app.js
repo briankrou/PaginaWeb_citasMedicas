@@ -3,9 +3,6 @@
 const express = require('express')
 const path = require('path');
 const morgan = require('morgan');
-const mysql = require('mysql2');
-
-
 const app = express()
 
 
@@ -24,7 +21,7 @@ require('./router/routing')(app);
 app.use(morgan('dev'));
 
 
-// controll¿ador base de datos
+// controlllador base de datos
 const { fetchData } = require('./data/contollerDB');
 
 // Consulta a la base de datos
