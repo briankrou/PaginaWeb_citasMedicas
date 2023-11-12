@@ -13,10 +13,11 @@
     "bootstrap": "^5.3.2",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-myconnection": "^1.0.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "node": "^21.1.0",
-    "node-mysql": "^0.4.2"
+    "mysql2": "^3.6.3",
+    "node": "^21.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
