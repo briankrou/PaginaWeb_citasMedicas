@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname+"/public"))
 
-require('./routes/routing')(app);
+require('./router/routing')(app);
  
   app.use((req, res, next) => {
     res.status(404).render("404", { titulo: 'Página 404' });
