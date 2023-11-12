@@ -1,12 +1,13 @@
 
 //conexion con base dedatos
-// app.js
 const { getAllData } = require('./queries');
 
 async function fetchData(consulta) {
   try {
+    //Define una función asíncrona llamada fetchDataque toma una consulta SQL (`consultaconsulta) como argumento.
     const data = await getAllData(consulta);
-    console.log('Fetched data:', data);
+    return JSON.stringify(data);
+
   } catch (error) {
     console.error('Error fetching data:', error);
   }
