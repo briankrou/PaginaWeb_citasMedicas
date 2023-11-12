@@ -13,7 +13,7 @@ app.use(express.static(__dirname+"/public"))
 require('./routes/routing')(app);
  
   app.use((req, res, next) => {
-    res.status(404).render("404", { titulo: 'Página 404' ,descripcion: 'Titulo de el sitio web' });
+    res.status(404).render("404", { titulo: 'Página 404' });
   });
 
 app.listen(PORT, () => {
