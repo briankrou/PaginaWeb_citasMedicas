@@ -15,10 +15,11 @@ module.exports = function(app){
   app.get("/login", (req, res) => {
     res.render("login", { titulo: "inicio EJS" });
   });
-
   app.get("/usuario", (req, res) => {
-    res.render([{nombre:"minombre"}]);
+    res.render("usuario", { titulo: "inicio EJS" });
   });
+
+
 
 
 }
