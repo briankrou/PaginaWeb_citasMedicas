@@ -1,13 +1,13 @@
 // data/queries.js
 const { getConnection } = require('./conexion');
 
-function getAllData() {
+function getAllData(consulta) {
   const connection = getConnection();
 
   connection.connect();
 
   return new Promise((resolve, reject) => {
-    const sql = 'SELECT * FROM  usuarios';
+    const sql = consulta;
 
     connection.query(sql, (err, results) => {
       connection.end();

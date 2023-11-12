@@ -26,7 +26,8 @@ app.use(morgan('dev'));
 
 // controll¿ador base de datos
 const { fetchData } = require('./data/contollerDB');
-fetchData();
+//consulta a la base de datos 
+fetchData('SELECT * FROM  usuarios');
 
 
   app.use((req, res, next) => {

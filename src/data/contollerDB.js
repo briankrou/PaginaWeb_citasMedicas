@@ -3,9 +3,9 @@
 // app.js
 const { getAllData } = require('./queries');
 
-async function fetchData() {
+async function fetchData(consulta) {
   try {
-    const data = await getAllData();
+    const data = await getAllData(consulta);
     console.log('Fetched data:', data);
   } catch (error) {
     console.error('Error fetching data:', error);
