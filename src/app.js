@@ -30,11 +30,10 @@ const { fetchData } = require('./data/contollerDB');
     const resultado = await fetchData('SELECT * FROM usuarios');
 
     if (resultado) {
-      const users = JSON.parse(resultado);
-      console.log(users);
+      const dataJSON = JSON.parse(resultado);
 
-      if (users.length > 0) {
-        const firstUser = users[0];
+      if (dataJSON.length > 0) {
+        const firstUser = dataJSON[0];
         console.log('User ID:', firstUser.id);
         console.log('Nombre:', firstUser.nombre);
         console.log('Usuario:', firstUser.usuario);
