@@ -1,7 +1,7 @@
 
 //const { erro } = require('console');
 const express = require('express')
-const path = require('path');
+
 const morgan = require('morgan');
 const app = express()
 
@@ -21,41 +21,7 @@ require('./router/routing')(app);
 app.use(morgan('dev'));
 
 
-// controlllador base de datos
-const { fetchData } = require('./data/contollerDB');
-
-// Consulta a la base de datos
-(async () => {
-  try {
-    const resultado = await fetchData('SELECT * FROM usuarios');
-
-    if (resultado) {
-      const dataJSON = JSON.parse(resultado);
-
-      if (dataJSON.length > 0) {
-        const firstUser = dataJSON[0];
-        console.log('User ID:', firstUser.id);
-        console.log('Nombre:', firstUser.nombre);
-        console.log('Usuario:', firstUser.usuario);
-        console.log('Clave:', firstUser.clave);
-        console.log('Token:', firstUser.token);
-      } else {
-        console.log('No users found.');
-      }
-    } else {
-      console.log('No data received from fetchData.');
-    }
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-})();
-
-
-  app.use((req, res, next) => {
-    res.status(404).render("404", { titulo: 'Página 404' });
-  });
-
-
+//inicia servidor
   try {
     app.listen(PORT, () => {
       console.log(`Servidor escuchando en el puerto: ${PORT}`);
