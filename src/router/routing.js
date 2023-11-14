@@ -20,7 +20,9 @@ module.exports = function(app){
     app.get("/login",(req,res) => {res.render("login", { titulo: "inicio EJS" });});
 
   //login iniciar sesion
-    app.get('/login/iniciar',(req,res) => {loginController.iniciarSesion("txgsggagsasg2113s",'BrianKrou')})
+    app.get('/login/iniciar',(req,res) => {loginController.iniciarSesion("txgsggagsasg2113s",'BrianKrou')
+  
+  })
   
   //enponit usuario
     app.get("/usuario", (req, res) => {res.render("usuario", { titulo: "inicio EJS" });});
