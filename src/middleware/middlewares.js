@@ -1,7 +1,5 @@
 const notFound = (req, res, next) => {
-  res.status(404);
-  const error = new Error(`🔍 - Not Found - ${req.originalUrl}`);
-  next(error);
+  res.status(404).render("404", { titulo: 'Página 404' });
 };
 
 const errorHandler = (err, req, res, next) => {

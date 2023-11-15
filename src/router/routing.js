@@ -41,12 +41,6 @@ const morgan = require('morgan');
   //enponit usuario
     router.get("/usuario", (req, res) => {res.render("usuario", { titulo: "inicio EJS" });});
     
-
-    router.use((req, res, next) => {
-      res.status(404).render("404", { titulo: 'Página 404' });
-    });
-  
-
     
     module.exports = router;
 
