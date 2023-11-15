@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const iniciarSesion = require('../controllers/loginController');
+const Sesion = require('../controllers/loginController');
 
 console.log(typeof(iniciarSesion));
 
@@ -25,7 +25,7 @@ const morgan = require('morgan');
 
   //login iniciar sesion
     router.get('/login/iniciar', (req, res) => {
-      const tocken = iniciarSesion(req.query.user,req.query.password)
+      const tocken = Sesion.iniciarSesion(req.query.user,req.query.password)
       console.log('Respuesta '+tocken)
       if(tocken!=false){
         res.set('token',tocken);
