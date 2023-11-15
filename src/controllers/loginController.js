@@ -1,4 +1,4 @@
-exports.iniciarSesion =(token,usuario)=>{
+exports.iniciarSesion =(token)=>{
 
   // controlllador base de datos
 const { fetchData } = require('../data/contollerDB');

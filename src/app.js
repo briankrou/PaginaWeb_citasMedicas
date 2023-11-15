@@ -1,31 +1,30 @@
-
-//const { erro } = require('console');
-const express = require('express')
-
+const express = require('express');
 const morgan = require('morgan');
-const app = express()
+const helmet = require('helmet');
 
+const middlewares = require('./middleware/middlewares');
 
-const PORT = process.env.PORT || 3000;
+const router = require('./router/routing');
 
+const app = express();
+
+app.use(helmet());
+app.use(morgan('tiny'));
+app.use('/',router);
 
 // Motor de plantilla
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname+"/public"))
 
-//routing
-require('./router/routing')(app);
+///app.use(middlewares.notFound);
+//app.use(middlewares.errorHandler);
 
-// middleware
-app.use(morgan('dev'));
-
-
-//inicia servidor
-  try {
-    app.listen(PORT, () => {
-      console.log(`Servidor escuchando en el puerto: ${PORT}`);
-    });
+const PORT=3000;
+try {
+  app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto: ${PORT}`);
+});
   } catch (error) {
     console.error('Error starting the server:', error.message);
     // or console.error('Error starting the server:', error.stack);
