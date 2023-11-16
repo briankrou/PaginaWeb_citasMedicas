@@ -8,7 +8,6 @@
       return false
     }
   }
-
 }
 
 module.exports=new Sesion();
