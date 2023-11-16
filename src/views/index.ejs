@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-    
-  </head>
+<%- include('template/cabecera'); %>
 
 <body>
-        <%- include('template/cabecera', {tituloweb: 'Inicio EJS'}); %>
-
-        <%- include('template/navbar', {tituloweb: 'Inicio EJS'}); %>
+<!--Incluide navbar-->
+<%- include('template/navbar'); %>
         <main>
           <div class="container">
               <h3 class="text-center" >Nuestros Servicios</h3>
@@ -53,7 +47,7 @@
                       <li>Ortopedia</li>
                       <li>Psiquiatría</li>
                   </ul>
-                  <button class="btn btn-primary ">Ver mas</button>
+                  <a href="/especialistas" class="btn btn-primary ">Ver mas</a>
               </div>
               <div class="col">
                   <img src="/img/doctor.svg" alt="">
@@ -71,8 +65,8 @@
       
       
       </main>
-
-        <%- include('template/footer', {tituloweb: 'Inicio EJS'}); %>
+ <!--Incluide formulario de foter-->
+        <%- include('template/footer'); %>
     
 </body>
 

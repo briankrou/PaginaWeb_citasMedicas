@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= titulo %></title>
+  <title>Not Found (404)</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/error.css" />
+  <script src="//use.typekit.net/xxi2gra.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
+
 <body>
-    <h1></h1>
+  <!-- This file lives in public/404.html -->
+  <div class="bg-helper">
+    <div class="container">
+      <div class="maily">
+        <img src="/images/maily-sad.png" alt="Maily is Sad">
+      </div>
+      <div class="caption">
+        <h1>Sorry, we couldn't find that page.</h1>
+        <p>The page you're searching for doesn't exist anymore, either it has been moved or the link is broken. Stay up to date by visiting our <a href="https://litmus.com/blog/" target="_blank">blog</a>.</p>
+      </div>
+      <div class="btn-group">
+        <a class="btn-outline" href="mailto:hello@litmus.com">Get in Touch with us</a>
+        <a class="btn-primary" href="https://litmus.com/" target="_blank">Return to Homepage</a>
+      </div>
+      <div class="error-code">
+        <large>
+          Error Code: 404
+        </large>
+      </div>
+    </div>
+  </div><!-- /bg-helper -->
+
 </body>
 </html>
