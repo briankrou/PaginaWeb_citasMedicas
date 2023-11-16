@@ -12,16 +12,21 @@ const morgan = require('morgan');
   //endpoints
 
   //endpoint principal
-   router.get("/", (req, res) => { res.render("index", { titulo: "inicio EJS" });});
+   router.get("/", (req, res) => { res.render("index", { titulo: "Inicio", estado: 'Iniciar Sesion' });});
 
   //endpoint nosotros
-   router.get("/nosotros", (req, res) => {res.render("nosotros", { titulo: "inicio EJS" });});
+   router.get("/nosotros", (req, res) => {res.render("nosotros", { titulo: "Nosotros" ,estado: 'Iniciar Sesion' });});
 
   //endpoint servicios
-   router.get("/servicios", (req, res) => {res.render("servicios", { titulo: "inicio EJS" });});
+   router.get("/servicios", (req, res) => {res.render("servicios", { titulo: "Servicios" ,estado: 'Iniciar Sesion' });});
   
   //endpoint login
-    router.get("/login",(req,res) => {res.render("login", { titulo: "inicio EJS" });});
+    router.get("/login",(req,res) => {res.render("login", { titulo: "Login"  ,estado: 'Iniciar Sesion'});});
+     
+  //endpoint especialistas
+    router.get("/especialistas",(req,res) => {res.render("especialistas", { titulo: "Especialistas" ,estado: 'Iniciar Sesion'});
+
+  });
 
   //login iniciar sesion
     router.get('/login/iniciar', (req, res) => {
